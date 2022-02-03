@@ -1,0 +1,15 @@
+clear
+clc
+datatable=importdata('springmass.txt');
+%datatable has rowheaders which is 100*1 cells
+%also data with size 100*3
+n=length(datatable.rowheaders);
+A=zeros(100,1);
+for i=1:100
+    matrix=cell2mat(datatable.rowheaders(i));
+    A(i)=matrix(1);
+end
+
+%%%%
+spring=load('springmass.txt');
+plot(spring(:,1),spring(:,2),spring(:,3),spr)
